@@ -4,6 +4,9 @@ import java.util.concurrent.locks.LockSupport;
 
 /**
  * 使用lockSupport 的 park 和 unpark 方法
+ *
+ * 先调用线程的unpark，则下一次调用park的时候线程不会阻塞
+ *
  */
 
 public class T04_LockSupport {

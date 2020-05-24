@@ -1,6 +1,7 @@
 package com.shan.T1;
 
 import java.util.concurrent.Phaser;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 阶段锁 phaser
@@ -23,7 +24,12 @@ public class T02_Phaser {
 
         Thread t2 = new Thread(()->{
             for (int i = 1; i < 27; i++) {
-                System.out.print(i);
+                try {
+                    TimeUnit.MILLISECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(i);
                 phaser.arriveAndAwaitAdvance();
             }
         });
