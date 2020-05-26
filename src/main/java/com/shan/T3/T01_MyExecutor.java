@@ -3,7 +3,7 @@ package com.shan.T3;
 import java.util.concurrent.Executor;
 
 /**
- * Executor 执行Callable方法
+ * Executor 执行Runnable方法
  */
 public class T01_MyExecutor implements Executor {
     @Override
